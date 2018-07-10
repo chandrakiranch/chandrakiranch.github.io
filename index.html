@@ -1,47 +1,43 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>Wedding Invitation</title>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<style>
-body,h1,h2{font-family: "Raleway", sans-serif}
-body, html {height: 100%}
-p {line-height: 2}
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="http://cdn.rawgit.com/hilios/jQuery.countdown/2.2.0/dist/jquery.countdown.min.js"></script>
+<script>
+  $(document).ready(function(){
+         function init(dt){
+            $('#countdown').countdown(dt).on('update.countdown', function(event) {
+                var $this = $(this).html(event.strftime(
+                '<div class="timer-wrapper"><div class="time">%m</div><span class="text">months</span></div>'
+              + '<div class="timer-wrapper"><div class="time">%D</div><span class="text">days</span></div>'
+              + '<div class="timer-wrapper"><div class="time">%H</div><span class="text">hrs</span></div>'
+              + '<div class="timer-wrapper"><div class="time">%M</div><span class="text">mins</span></div>'
+              + '<div class="timer-wrapper"><div class="time">%S</div><span class="text">sec</span></div>'));
+            });
+         }
 
-.parallax {
-    /* The image used */
-    background-image: url('img_parallax.jpg');
+         //initilize counter on load with some default date
+         init("2018/10/30");
 
-    /* Full height */
-    height: 100%;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.bgimg {
-    width: 100%;
-    min-height: 100%;
-    background-position: center;
-    background-size: cover;
-}
-.bgimg2 {
-    min-height: 50%;
-    background-position: center;
-    background-size: cover;
-}
-.bgimg {background-image: url("coorg_sunrise_small.jpg")}
-.bgimg2 {background-image: url("Flowers.jpg")}
-</style>
+      });
+</script>
 <body>
 
+<header style="background-color:#f1f1f1; padding:1px">
+  <ul class="snip1217">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Products</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</header>
 
 <!-- Header / Home-->
 <!--<header class="w3-display-container w3-wide bgimg w3-grayscale-min" id="home">
@@ -61,33 +57,77 @@ p {line-height: 2}
 </div>
 
 <!-- Navbar (sticky bottom) -->
-<div class="w3-bottom w3-hide-small">
-  <div class="w3-bar w3-white w3-center w3-padding w3-opacity-min w3-hover-opacity-off">
-    <a href="#home" style="width:25%" class="w3-bar-item w3-button">Home</a>
-    <a href="#us" style="width:25%" class="w3-bar-item w3-button">Sravanthi & Chandrakiran</a>
-    <a href="#wedding" style="width:25%" class="w3-bar-item w3-button">Wedding</a>
-    <a href="#rsvp" style="width:25%" class="w3-bar-item w3-button w3-hover-black">RSVP</a>
-  </div>
-</div>
+<!--<div class="w3-top w3-hide-small">-->
+  <!--<div class="w3-bar w3-white w3-center w3-padding w3-opacity-min w3-hover-opacity-off">-->
+    <!--<a href="#home" style="width:33%" class="w3-bar-item w3-button">Home</a>-->
+    <!--<a href="#us" style="width:33%" class="w3-bar-item w3-button">Sravanthi & Chandrakiran</a>-->
+    <!--<a href="#wedding" style="width:33%" class="w3-bar-item w3-button">Wedding</a>-->
+    <!--&lt;!&ndash;<a href="#rsvp" style="width:25%" class="w3-bar-item w3-button w3-hover-black">RSVP</a>&ndash;&gt;-->
+  <!--</div>-->
+<!--</div>-->
 
 <!-- About / Jane And John -->
-<div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min" id="us">
+<div class="w3-container w3-padding-64 w3-pale-red" id="us">
   <div class="w3-content">
     <h1 class="w3-center w3-text-grey"><b>Sravanthi & Chandrakiran</b></h1>
-    <img class="w3-round w3-grayscale-min" src="coorg_sunrise_small.jpg" style="width:100%;margin:32px 0">
-    <p><i>You all know us. And we all know you. We are getting married.</i>
-    </p><br>
+    <!--<img class="w3-round w3-grayscale-min" src="coorg_sunrise_small.jpg" style="width:100%;margin:32px 0"> -->
+      <div class="container">
+        <img src="coorg_sunrise_small.jpg" class="image" style="width:100%">
+        <div class="middle">
+          <div class="text"><h1>Sravanthi</h1></div>
+        </div>
+      </div>
+      <div class="container">
+        <img src="coorg_sunrise_small.jpg" class="image" style="width:100%">
+        <div class="middle">
+          <div class="text"><h1>Chandrakiran</h1> </div>
+        </div>
+      </div>
+    </div>
+  <div class="w3-content">
+    <p align="center"><i>You all know us. And we all know you. We are getting married.</i></p><br>
     <p class="w3-center"><a href="#wedding" class="w3-button w3-black w3-round w3-padding-large w3-large">Wedding Details</a></p>
   </div>
 </div>
 
+
 <!-- Background photo -->
 <div class="w3-display-container bgimg2">
   <div class="w3-display-middle w3-text-white w3-center">
-    <h1 class="w3-jumbo">You Are Invited</h1><br>
-    <h2>Of course..</h2>
+    <div style="font-size:5vw;">Save Your Date</div><br>
+    <!--<h2>Of course..</h2>-->
+    <div class = "timer" id="countdown"></div>
   </div>
 </div>
+
+<div class="w3-container w3-padding-64 w3-white w3-center" id="us">
+  <div>
+    <h1>Our Journey Moments</h1><br>
+  </div>
+  <div>
+    <img class = "rounded_img" src="coorg_sunrise_small.jpg" style="height:150px;width:150px;">
+    <img class = "rounded_img" src="coorg_sunrise_small.jpg" style="height:200px;width:200px;">
+    <img class = "rounded_img" src="coorg_sunrise_small.jpg" style="height:250px;width:250px;">
+    <img class = "rounded_img" src="coorg_sunrise_small.jpg" style="height:200px;width:200px;">
+  </div>
+</div>
+
+<div class="w3-display-container bgimg2">
+  <div class="w3-display-middle w3-text-white w3-center">
+    <div class="w3-half; padding: 15px;">
+        <h2>When</h2>
+        <p>Wedding Ceremony - 2:00pm</p>
+        <p>Reception & Dinner - 5:00pm</p>
+      </div>
+      <div class="w3-half; padding: 15px;">
+        <h2>Where</h2>
+        <p>Some place, an address</p>
+        <p>Some where, some address</p>
+      </div>
+  </div>
+</div>
+
+
 
 <!-- Wedding information -->
 <div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min w3-center" id="wedding">
@@ -110,16 +150,16 @@ p {line-height: 2}
 </div>
 
 <!-- RSVP section -->
-<div class="w3-container w3-padding-64 w3-pale-red w3-center w3-wide" id="rsvp">
+<!--div class="w3-container w3-padding-64 w3-pale-red w3-center w3-wide" id="rsvp">
   <h1>HOPE YOU CAN MAKE IT!</h1>
   <p class="w3-large">Kindly Respond By September, 2015</p>
   <p class="w3-xlarge">
     <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-round w3-red w3-opacity w3-hover-opacity-off" style="padding:8px 60px">RSVP</button>
   </p>
-</div>
+</div>-->
 
 <!-- RSVP modal -->
-<div id="id01" class="w3-modal">
+<!--<div id="id01" class="w3-modal">
   <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="padding:32px;max-width:600px">
     <div class="w3-container w3-white w3-center">
       <h1 class="w3-wide">CAN YOU COME?</h1>
@@ -138,13 +178,13 @@ p {line-height: 2}
       </div>
     </div>
   </div>
-</div>
+</div>-->
 
-<!-- Footer -->
+<!--!&#45;&#45; Footer &ndash;&gt;
 <footer class="w3-center w3-black w3-padding-16">
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer>
-<div class="w3-hide-small" style="margin-bottom:32px"> </div>
-
+</footer>-->
+<!--<div class="w3-hide-small" style="margin-bottom:32px"> </div>-->
+<footer class="w3-center w3-black w3-padding-16">&copy; Santrastudios.com</footer>
 </body>
 </html>
